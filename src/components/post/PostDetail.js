@@ -7,7 +7,7 @@ const getArrayValueByKey = (params) => {
     const { Key, Value, List } = params;
 
     return List?.find((item) => {
-        return item[Key] == Value;
+        return item[Key] === Value;
     });
 };
 

@@ -1,5 +1,5 @@
 import React, { useContext, useRef, useState } from 'react'
-import { Col, Form, IconButton, Input, Panel, Row, Tag, TagGroup, Schema } from 'rsuite'
+import { Col, Form, IconButton, Panel, Row, Tag, TagGroup, Schema } from 'rsuite'
 import { faTrash, faEdit, faCheckCircle, faEye } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { TimelineContext } from '../../layout/Timeline/Provider';

@@ -8,7 +8,7 @@ import Header from './layout/Header';
 import PostDetail from './components/post/PostDetail';
 
 function App() {
-  const [theme, setTheme] = useState('light');
+  const [theme] = useState('light');
   return (
     <CustomProvider theme={theme}>
       <div className="App">

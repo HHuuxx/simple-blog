@@ -1,5 +1,5 @@
 import moment from 'moment';
-import React, { useContext, useEffect, useRef } from 'react'
+import React, { useContext, useRef } from 'react'
 import { Modal, Schema, Button, ButtonToolbar, Input, Form } from 'rsuite'
 import { TimelineContext } from '../../layout/Timeline/Provider';
 
