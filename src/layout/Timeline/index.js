@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { PanelGroup, IconButton, Pagination, InputPicker, Col, Row, Input } from 'rsuite'
+import { PanelGroup, Pagination, InputPicker, Col, Row, Input } from 'rsuite'
 import PostComponent from "../../components/post/PostComponent"
 import PostEditor from '../../components/post/PostEditor'
 import cls from "./index.module.scss"
