@@ -7,18 +7,11 @@ const Textarea = React.forwardRef((props, ref) => <Input {...props} as="textarea
 
 
 const model = Schema.Model({
-    title: Schema.Types.StringType().isRequired('Title is Required'),
-    content: Schema.Types.StringType().isRequired('Content is Required')
+    title: Schema.Types.StringType().isRequired('Title is Required').minLength(1),
+    content: Schema.Types.StringType().isRequired('Content is Required').minLength(1)
 });
 const uniqueId = (length = 16) => {
     return parseInt(Math.ceil(Math.random() * Date.now()).toPrecision(length).toString().replace(".", ""))
-}
-
-const initialValue = {
-    id: uniqueId(),
-    title: '',
-    content: '',
-    dateCreated: moment().format('MMMM Do YYYY, h:mm a'),
 }
 
 const texts = {
@@ -27,6 +20,13 @@ const texts = {
 }
 
 export default function PostEditor() {
+    const initialValue = {
+        id: uniqueId(),
+        title: '',
+        content: '',
+        dateCreated: moment().format('MMMM Do YYYY, h:mm a'),
+    }
+
     const formRef = useRef()
     const [open, setOpen] = React.useState(false);
     const [formValue, setFormValue] = React.useState(initialValue);
