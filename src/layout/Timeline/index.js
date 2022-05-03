@@ -92,7 +92,6 @@ export default function Timeline() {
 
     return (
         <div>
-            <h1 className={cls.moduleTitle}>Allen Raven's Simple Blog</h1>
             <Row>
                 <Col xs="24" md="12">
                     <PostEditor />

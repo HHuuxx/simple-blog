@@ -10,6 +10,12 @@
     margin: 0px 5px;
 }
 
-.contentContainer{
-    white-space: pre-line;
+.textShortened{
+  
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+  .textExtended{
+        white-space: pre-line;
+    }
