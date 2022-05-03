@@ -72,7 +72,7 @@ export default function Timeline() {
                 })
             default: {
 
-                return paginate(posts, paginationOptions.dataPerPage, paginationOptions.activePage).map((post) => {
+                return paginate(posts, paginationOptions.dataPerPage, paginationOptions.activePage).reverse().map((post) => {
                     return <PostComponent key={post.id} {...post} />
                 })
             }
@@ -92,7 +92,7 @@ export default function Timeline() {
 
     return (
         <div>
-            <h1 className={cls.moduleTitle}>Allen's Blog</h1>
+            <h1 className={cls.moduleTitle}>Allen Raven's Simple Blog</h1>
             <Row>
                 <Col xs="24" md="12">
                     <PostEditor />
