@@ -51,12 +51,11 @@ export default function Timeline() {
     const getPosts = () => {
         let posts = [...state.posts]
         if (searchText || searchText !== "") {
-            posts = posts.filter(post => post.title === searchText)
+            posts = posts.filter(post => (post.title).toLowerCase().includes(searchText.toLowerCase()))
         }
 
         switch (order) {
             case 1: {
-
                 return paginate(posts, paginationOptions.dataPerPage, paginationOptions.activePage).sort((a, b) => {
                     return a.dateCreated.localeCompare(b.dateCreated)
                 }).map((post) => {
