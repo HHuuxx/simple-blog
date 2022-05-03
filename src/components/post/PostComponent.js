@@ -14,7 +14,6 @@ const model = Schema.Model({
     content: Schema.Types.StringType().isRequired('Content is Required')
 });
 
-
 export default function PostComponent({
     id,
     title,
@@ -51,25 +50,22 @@ export default function PostComponent({
         setOpen(false)
         navigate("/")
     }
-    const handleContentEdit = () => {
-        if (formRef.current.check()) {
-            dispatch({
-                type: "UDPATE_POST",
-                payload: formValue
-            })
-            setOpen(false)
-
-            setTimeout(() => {
-                setFormValue(initialValue)
-            }, 500)
-            setIsEditing(false)
-        }
-    }
 
     const handleEdit = () => {
         setIsEditing(true)
         if (isEditing) {
-            handleContentEdit()
+            if (formRef.current.check()) {
+                dispatch({
+                    type: "UDPATE_POST",
+                    payload: formValue
+                })
+                setOpen(false)
+
+                setTimeout(() => {
+                    setFormValue(initialValue)
+                }, 500)
+                setIsEditing(false)
+            }
         }
     }
 
